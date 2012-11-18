@@ -2,16 +2,25 @@
 
 namespace markup;
 
-require_once __DIR__ . '/markdown.php';
-require_once __DIR__ . '/smartypants.php';
+require_once dirname(__DIR__) . '/lib/markdown_extra.php';
+require_once dirname(__DIR__) . '/lib/smartypants.php';
+require_once dirname(__DIR__) . '/lib/markdown_extra_extended.php';
 
 use MarkdownExtra_Parser;
 use SmartyPants_Parser;
+use MarkdownExtraExtended_Parser;
 
 class Markup {
 
     public static $settings = array(
-		'pass' => array('normalize', 'easy', 'gfm', 'markdown', 'smartyPants')
+		'pass' => array(
+			'normalize',
+			'easy',
+			'gfm',
+			'markdownExtra',
+			'smartyPants',
+			'markdownExtraExtended'
+		)
 	);
 
     protected static $_loaded = array();
@@ -48,19 +57,27 @@ class Markup {
 	}
 
 	// markdown -> html
-	public static function markdown($content) {
-		if (!isset(static::$_loaded['markdown'])) {
-			static::$_loaded['markdown'] = new MarkdownExtra_Parser();
+	public static function markdownExtra($content) {
+		if (!isset(static::$_loaded[__FUNCTION__])) {
+			static::$_loaded[__FUNCTION__] = new MarkdownExtra_Parser();
 		}
-		return static::$_loaded['markdown']->transform($content);
-	}
+		return static::$_loaded[__FUNCTION__]->transform($content);
+}
 
 	// markdown/html -> html
 	public static function smartyPants($content) {
-		if (!isset(static::$_loaded['smartyPants'])) {
-			static::$_loaded['smartyPants'] = new SmartyPants_Parser();
+		if (!isset(static::$_loaded[__FUNCTION__])) {
+			static::$_loaded[__FUNCTION__] = new SmartyPants_Parser();
 		}
-		return static::$_loaded['smartyPants']->transform($content);
+		return static::$_loaded[__FUNCTION__]->transform($content);
+	}
+
+	// markdown/html -> html
+	public static function markdownExtraExtended($content) {
+		if (!isset(static::$_loaded[__FUNCTION__])) {
+			static::$_loaded[__FUNCTION__] = new MarldownExtraExtended_Parser();
+		}
+		return static::$_loaded[__FUNCTION__]->transform($content);
 	}
 }
 
