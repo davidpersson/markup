@@ -17,9 +17,9 @@ class Markup {
 			'normalize',
 			'easy',
 			'gfm',
-			'markdownExtra',
-			'smartyPants',
-			'markdownExtraExtended'
+			// 'markdownExtra',
+			'markdownExtraExtended',
+			'smartyPants'
 		)
 	);
 
