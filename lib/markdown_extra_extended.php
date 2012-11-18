@@ -3,7 +3,7 @@
 // https://github.com/egil/php-markdown-extra-extended/blob/master/README.markdown
 define( 'MARKDOWNEXTRAEXTENDED_VERSION',  "0.3" );
 
-require 'markdown_extra.php';
+require_once 'markdown_extra.php';
 
 class MarkdownExtraExtended_Parser extends MarkdownExtra_Parser {
 	# Tags that are always treated as block tags:
