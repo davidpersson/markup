@@ -75,7 +75,7 @@ class Markup {
 	// markdown/html -> html
 	public static function markdownExtraExtended($content) {
 		if (!isset(static::$_loaded[__FUNCTION__])) {
-			static::$_loaded[__FUNCTION__] = new MarldownExtraExtended_Parser();
+			static::$_loaded[__FUNCTION__] = new MarkdownExtraExtended_Parser();
 		}
 		return static::$_loaded[__FUNCTION__]->transform($content);
 	}
