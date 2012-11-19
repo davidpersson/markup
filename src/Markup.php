@@ -32,7 +32,11 @@ class Markup {
 			$pass = static::$_pass;
 		}
 		foreach ($pass as $parser) {
-			$content = static::{$parser}($content);
+			if (is_callable($parser)) {
+				$content = call_user_func($parser, $content);
+			} else {
+				$content = static::{$parser}($content);
+			}
 		}
 		return $content;
     }
