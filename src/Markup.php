@@ -12,22 +12,24 @@ use MarkdownExtraExtended_Parser;
 
 class Markup {
 
-    public static $settings = array(
-		'pass' => array(
-			'normalize',
-			'easy',
-			'gfm',
-			// 'markdownExtra',
-			'markdownExtraExtended',
-			'smartyPants'
-		)
+    protected static $_pass = array(
+		'normalize',
+		'easy',
+		'gfm',
+		// 'markdownExtra',
+		'markdownExtraExtended',
+		'smartyPants'
 	);
 
     protected static $_loaded = array();
 
-	public static function parse($content, $pass = array()) {
+	public static function config(array $config = array()) {
+		return static::$_pass = $config;
+	}
+
+	public static function parse($content, array $pass = array()) {
 		if (!$pass) {
-			$pass = static::$settings['pass'];
+			$pass = static::$_pass;
 		}
 		foreach ($pass as $parser) {
 			$content = static::{$parser}($content);
