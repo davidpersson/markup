@@ -13,7 +13,13 @@
  */
 
 spl_autoload_register(function($class) {
-	$file = __DIR__ . '/src/' . $class . '.php';
+	if (strpos($class, 'markup') === false) {
+		return false;
+	}
+	$name = str_replace('markup\\', '', $class);
+	$name = str_replace('\\', '/', $name);
+
+	$file = __DIR__ . '/src/' . $name . '.php';
 
 	if (file_exists($file)) {
 		require_once $file;
