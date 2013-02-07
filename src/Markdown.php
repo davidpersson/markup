@@ -29,7 +29,7 @@ class Markdown {
 	 *
 	 * @var array
 	 */
-    protected static $_pass = array(
+	protected static $_pass = array(
 		'normalize',
 		'easy',
 		'gfm',
@@ -42,7 +42,7 @@ class Markdown {
 	 *
 	 * @var array
 	 */
-    protected static $_loaded = array();
+	protected static $_loaded = array();
 
 	/**
 	 * Allows to configure the steps content is run through.
@@ -73,7 +73,7 @@ class Markdown {
 			}
 		}
 		return $content;
-    }
+	}
 
 	/* Pre-Parsers */
 
