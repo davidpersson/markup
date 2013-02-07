@@ -24,12 +24,12 @@ information on those see the README of the respective 3rd party library. When
 present the full license text of each library has been amended to the LICENSE
 file.
 
-Path                                 Copyright Holder                License         Modified
-....................................................................................................
-lib/markdown_extra.php               John Gruber, Michel Fortin      BSD-3-clause    no
-lib/markdown_extra_extended.php      John Gruber, Michel Fortin,     BSD-3-clause    yes
-                                     Egil Hansen
-lib/smartypants.php                  John Gruber, Michel Fortin      BSD-3-clause    no
+Path                              Copyright Holder              License        Modified
+.......................................................................................
+lib/markdown_extra.php            John Gruber, Michel Fortin    BSD-3-clause   no
+lib/markdown_extra_extended.php   John Gruber, Michel Fortin,   BSD-3-clause   yes
+                                  Egil Hansen
+lib/smartypants.php               John Gruber, Michel Fortin    BSD-3-clause   no
 
 All modifications to 3rd party libraries are documented in the form of version
 controlled changes. Please consult the version history for changes to the
