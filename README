@@ -39,6 +39,11 @@ Versions & Requirements
 -----------------------
 Version 1.0.0, PHP >=5.3.0
 
+Installation
+------------
+Classes in this library can be autoloaded. In order to enable autoloading you
+must bootstrap the library with the included `bootstrap.php` file.
+
 Usage
 -----
 <?php
