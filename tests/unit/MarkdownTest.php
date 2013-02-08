@@ -20,20 +20,16 @@ class MarkdownTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGfm() {
 		// Not touch single underscores inside words
-		/*
 		$data = "foo_bar";
 		$result = Markdown::gfm($data);
 		$expected = "foo_bar";
 		$this->assertEquals($expected, $result);
-		*/
 
 		// Not touch underscores in code blocks
-		/*
 		$data = "    foo_bar_baz";
 		$result = Markdown::gfm($data);
 		$expected = "    foo_bar_baz";
 		$this->assertEquals($expected, $result);
-		*/
 
 		// Not treat pre blocks with pre-text differently
 		/*
