@@ -13,8 +13,18 @@
  */
 
 spl_autoload_register(function($class) {
+	$irregular = array(
+		'MarkdownExtra_Parser' => 'lib/markdown_extra',
+		'SmartyPants_Parser' => 'lib/smartypants.php',
+		'MarkdownExtraExtended_Parser' => 'lib/markdown_extra_extended.php'
+	);
+	if (isset($irregular[$class])) {
+		require __DIR__ . '/' . $irregular[$class];
+		return;
+	}
+
 	if (strpos($class, 'markup') === false) {
-		return false;
+		return;
 	}
 	$name = str_replace('markup\\', '', $class);
 	$name = str_replace('\\', '/', $name);
