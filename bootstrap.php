@@ -14,7 +14,7 @@
 
 spl_autoload_register(function($class) {
 	$irregular = array(
-		'MarkdownExtra_Parser' => 'lib/markdown_extra',
+		'MarkdownExtra_Parser' => 'lib/markdown_extra.php',
 		'SmartyPants_Parser' => 'lib/smartypants.php',
 		'MarkdownExtraExtended_Parser' => 'lib/markdown_extra_extended.php'
 	);
