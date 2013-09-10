@@ -54,15 +54,15 @@ $html = Markdown::parse('...markdown...');
 
 // Reconfigure the steps to pass content through
 // for all subsequent parsing.
-Markdown::config(array(
+Markdown::config([
 	'normalize',
 	'markdownExtra'
-));
+]);
 
 // Or provide the steps ad hoc.
-$html = Markdown::parse('...markdown...', array(
+$html = Markdown::parse('...markdown...', [
 	'normalize',
 	'markdownExtra'
-));
+]);
 
 ?>

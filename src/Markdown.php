@@ -25,20 +25,20 @@ class Markdown {
 	 *
 	 * @var array
 	 */
-	protected static $_pass = array(
+	protected static $_pass = [
 		'normalize',
 		'easy',
 		'gfm',
 		'markdownExtraExtended',
 		'smartyPants'
-	);
+	];
 
 	/**
 	 * Holds instances of already loaded parsers.
 	 *
 	 * @var array
 	 */
-	protected static $_loaded = array();
+	protected static $_loaded = [];
 
 	/**
 	 * Allows to configure the steps content is run through.
@@ -46,7 +46,7 @@ class Markdown {
 	 * @param array $config An array of steps.
 	 * @return void
 	 */
-	public static function config(array $config = array()) {
+	public static function config(array $config = []) {
 		return static::$_pass = $config;
 	}
 
@@ -57,7 +57,7 @@ class Markdown {
 	 * @param array $config An array of steps.
 	 * @return string HTML
 	 */
-	public static function parse($content, array $pass = array()) {
+	public static function parse($content, array $pass = []) {
 		if (!$pass) {
 			$pass = static::$_pass;
 		}

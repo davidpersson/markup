@@ -13,11 +13,11 @@
  */
 
 spl_autoload_register(function($class) {
-	$irregular = array(
+	$irregular = [
 		'MarkdownExtra_Parser' => 'lib/markdown_extra.php',
 		'SmartyPants_Parser' => 'lib/smartypants.php',
 		'MarkdownExtraExtended_Parser' => 'lib/markdown_extra_extended.php'
-	);
+	];
 	if (isset($irregular[$class])) {
 		require __DIR__ . '/' . $irregular[$class];
 		return;
