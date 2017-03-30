@@ -2,7 +2,7 @@
 /**
  * markup
  *
- * Copyright (c) 2012-2013 David Persson
+ * Copyright (c) 2012 David Persson
  *
  * Distributed under the terms of the MIT License.
  * Redistributions of files must retain the above copyright notice.
