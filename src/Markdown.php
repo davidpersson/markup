@@ -122,7 +122,7 @@ class Markdown {
 	 */
 	public static function markdownExtra($content) {
 		if (!isset(static::$_loaded[__FUNCTION__])) {
-			static::$_loaded[__FUNCTION__] = new MarkdownExtra_Parser();
+			static::$_loaded[__FUNCTION__] = new \MarkdownExtra_Parser();
 		}
 		return static::$_loaded[__FUNCTION__]->transform($content);
 	}
@@ -136,7 +136,7 @@ class Markdown {
 	 */
 	public static function markdownExtraExtended($content) {
 		if (!isset(static::$_loaded[__FUNCTION__])) {
-			static::$_loaded[__FUNCTION__] = new MarkdownExtraExtended_Parser();
+			static::$_loaded[__FUNCTION__] = new \MarkdownExtraExtended_Parser();
 		}
 		return static::$_loaded[__FUNCTION__]->transform($content);
 	}
@@ -152,7 +152,7 @@ class Markdown {
 	 */
 	public static function smartyPants($content) {
 		if (!isset(static::$_loaded[__FUNCTION__])) {
-			static::$_loaded[__FUNCTION__] = new SmartyPants_Parser();
+			static::$_loaded[__FUNCTION__] = new \SmartyPants_Parser();
 		}
 		return static::$_loaded[__FUNCTION__]->transform($content);
 	}
