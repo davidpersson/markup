@@ -52,8 +52,7 @@ PHP >=5.4.0 is required to run the code.
 
 Installation
 ------------
-Classes in this library can be autoloaded. In order to enable autoloading you
-must bootstrap the library with the included `bootstrap.php` file.
+composer require davidpersson/markup
 
 Usage
 -----

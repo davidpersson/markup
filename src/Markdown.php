@@ -14,9 +14,9 @@
 
 namespace markup;
 
-use MarkdownExtra_Parser;
-use SmartyPants_Parser;
-use MarkdownExtraExtended_Parser;
+require_once dirname(__DIR__) . '/lib/markdown_extra.php';
+require_once dirname(__DIR__) . '/lib/markdown_extra_extended.php';
+require_once dirname(__DIR__) . '/lib/smartypants.php';
 
 class Markdown {
 

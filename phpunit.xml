@@ -12,7 +12,6 @@
  @link       http://github.com/davidpersson/markup
 -->
 <phpunit 
-	bootstrap="bootstrap.php"
 	backupGlobals="false"
 	backupStaticAttributes="false"
 >
